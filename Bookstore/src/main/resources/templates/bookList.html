@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
 	<title>StudentList</title>
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
 </head>
 <body>
-	<h1>Books</h1>
+<div class="container">
+	<div class="col-md-4">
+		<h1>Books</h1>
+	</div>
+	<div class="col-md-4">
+		<h1 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]!</h1>
+	</div>
+	<div class="col-md-4" style="padding:20px 0">
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" value="Sign Out" class="btn btn-sm btn-danger" />
+		</form>
+	</div>
 	<table class="table table-striped">
 		<tbody>
 			<tr>
-				<td><b>Author</b></td>
-				<td><b>Title</b></td>
-				<td><b>ISBN</b></td>
-				<td><b>Year</b></td>
-				<td><b>Category</b></td>
-				<td></td>
+				<th>Author</th>
+				<th>Title</th>
+				<th>ISBN</th>
+				<th>Year</th>
+				<th>Category</th>
+				<th sec:authorize="hasRole('ADMIN')"></th>
 			</tr>	
 			<tr th:each= "book : ${books}">
 				<td th:text="${book.author}"></td>
@@ -23,13 +34,13 @@
 				<td th:text="${book.isbn}"></td>
 				<td th:text="${book.year}"></td>
 				<td th:text="${book.category.name}"></td>
-				<td><a th:href="@{/delete/{id}(id=${book.id})}" class="btn btn-danger">Delete</a></td>
+				<td sec:authorize="hasRole('ADMIN')"><a th:href="@{/delete/{id}(id=${book.id})}" class="btn btn-xs btn-danger">Delete</a></td>
 			</tr>
 		</tbody>
 	</table>
 	
-	<a href="/add" class="btn btn-success">Add book</a>
-	
+	<a href="/add" class="btn btn-primary">Add book</a>
+</div>	
 </body>
 
 </html>
