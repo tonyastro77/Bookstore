@@ -11,11 +11,11 @@
 		<h1>Books</h1>
 	</div>
 	<div class="col-md-4">
-		<h1 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]!</h1>
+		<h3 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]!</h3>
 	</div>
 	<div class="col-md-4" style="padding:20px 0">
 		<form th:action="@{/logout}" method="post">
-			<input type="submit" value="Sign Out" class="btn btn-sm btn-danger" />
+			<input type="submit" value="Sign Out" class="btn btn-danger" />
 		</form>
 	</div>
 	<table class="table table-striped">
@@ -34,7 +34,7 @@
 				<td th:text="${book.isbn}"></td>
 				<td th:text="${book.year}"></td>
 				<td th:text="${book.category.name}"></td>
-				<td sec:authorize="hasRole('ADMIN')"><a th:href="@{/delete/{id}(id=${book.id})}" class="btn btn-xs btn-danger">Delete</a></td>
+				<td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/delete/{id}(id=${book.id})}" class="btn btn-xs btn-danger">Delete</a></td>
 			</tr>
 		</tbody>
 	</table>
