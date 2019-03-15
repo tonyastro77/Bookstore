@@ -29,12 +29,14 @@ public class BookstoreApplication {
 			Category c3 = new Category("Detective fiction");
 			Category c4 = new Category("Biography");
 			Category c5 = new Category("Humour");
+			Category c6 = new Category("Non-fiction");
 			
 			crepository.save(c1);
 			crepository.save(c2);
 			crepository.save(c3);
 			crepository.save(c4);
 			crepository.save(c5);
+			crepository.save(c6);
 			
 			Book b1 = new Book("Roberto Bolano", "1232323-21", "2666", 2004, crepository.findByName("Suspense fiction").get(0));
 			Book b2 = new Book("Tom Hodgkinson", "2212343-5", "How to be idle", 2004, crepository.findByName("Humour").get(0));
