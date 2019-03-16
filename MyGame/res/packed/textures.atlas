@@ -1,0 +1,118 @@
+
+textures.png
+size: 512,64
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+tony_stand_east
+  rotate: false
+  xy: 306, 3
+  size: 24, 50
+  orig: 24, 50
+  offset: 0, 0
+  index: -1
+tony_walk_east
+  rotate: false
+  xy: 306, 3
+  size: 24, 50
+  orig: 24, 50
+  offset: 0, 0
+  index: 1
+tony_stand_north
+  rotate: false
+  xy: 96, 6
+  size: 30, 47
+  orig: 30, 47
+  offset: 0, 0
+  index: -1
+tony_walk_north
+  rotate: false
+  xy: 96, 6
+  size: 30, 47
+  orig: 30, 47
+  offset: 0, 0
+  index: 1
+tony_stand_south
+  rotate: false
+  xy: 2, 2
+  size: 30, 51
+  orig: 30, 51
+  offset: 0, 0
+  index: -1
+tony_walk_south
+  rotate: false
+  xy: 2, 2
+  size: 30, 51
+  orig: 30, 51
+  offset: 0, 0
+  index: 1
+tony_stand_west
+  rotate: false
+  xy: 332, 3
+  size: 24, 50
+  orig: 24, 50
+  offset: 0, 0
+  index: -1
+tony_walk_west
+  rotate: false
+  xy: 332, 3
+  size: 24, 50
+  orig: 24, 50
+  offset: 0, 0
+  index: 1
+tony_walk_east
+  rotate: false
+  xy: 190, 5
+  size: 28, 48
+  orig: 28, 48
+  offset: 0, 0
+  index: 2
+tony_walk_east
+  rotate: false
+  xy: 250, 5
+  size: 27, 48
+  orig: 27, 48
+  offset: 0, 0
+  index: 0
+tony_walk_north
+  rotate: false
+  xy: 128, 5
+  size: 29, 48
+  orig: 29, 48
+  offset: 0, 0
+  index: 0
+tony_walk_north
+  rotate: false
+  xy: 159, 5
+  size: 29, 48
+  orig: 29, 48
+  offset: 0, 0
+  index: 2
+tony_walk_south
+  rotate: false
+  xy: 34, 4
+  size: 29, 49
+  orig: 29, 49
+  offset: 0, 0
+  index: 0
+tony_walk_south
+  rotate: false
+  xy: 65, 4
+  size: 29, 49
+  orig: 29, 49
+  offset: 0, 0
+  index: 2
+tony_walk_west
+  rotate: false
+  xy: 220, 5
+  size: 28, 48
+  orig: 28, 48
+  offset: 0, 0
+  index: 2
+tony_walk_west
+  rotate: false
+  xy: 279, 5
+  size: 25, 48
+  orig: 25, 48
+  offset: 0, 0
+  index: 0
